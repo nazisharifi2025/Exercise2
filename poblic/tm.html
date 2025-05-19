@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="bg-black text-white" id="body">
+    <div
+      id="mode"
+      class="h-12 w-12 float-right bg-white shadow-2xl shadow-gray-200"
+    ></div>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, rem
+      impedit. Labore perferendis sapiente facere at nobis ea minima provident
+      neque repellendus, temporibus, cum et exercitationem. Similique
+      consequuntur ratione laudantium.
+    </p>
+    <script>
+      const mode = document.getElementById("mode");
+      const body = document.getElementById("body");
+      mode.addEventListener("click", () => {
+        body.classList.remove("bg-black");
+        body.classList.remove("text-white");
+        body.classList.add("bg-white");
+        body.classList.add("text-black");
+        const h1 = document.createElement("h1");
+        h1.textContent = "hi there";
+        h1.classList.add("bg-blue");
+        body.appendChild(h1);
+      });
+    </script>
+  </body>
+</html>
