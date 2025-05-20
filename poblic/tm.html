@@ -18,18 +18,26 @@
       consequuntur ratione laudantium.
     </p>
     <script>
-      const mode = document.getElementById("mode");
-      const body = document.getElementById("body");
-      mode.addEventListener("click", () => {
-        body.classList.remove("bg-black");
-        body.classList.remove("text-white");
-        body.classList.add("bg-white");
-        body.classList.add("text-black");
-        const h1 = document.createElement("h1");
-        h1.textContent = "hi there";
-        h1.classList.add("bg-blue");
-        body.appendChild(h1);
-      });
+      // const mode = document.getElementById("mode");
+      // const body = document.getElementById("body");
+      // mode.addEventListener("click", () => {
+      //   if (body.classList.contains("bg-black")) {
+      //     body.classList.remove("bg-black");
+      //     body.classList.remove("text-white");
+      //     body.classList.add("bg-white");
+      //     body.classList.add("text-black");
+      //   } else {
+      //     body.classList.add("bg-black");
+      //     body.classList.add("text-white");
+      //     body.classList.remove("bg-white");
+      //     body.classList.remove("text-black");
+      //   }
+      // });
+
+      function item(a, b) {
+        console.log(a + b);
+      }
+      item(4, 5);
     </script>
   </body>
 </html>
