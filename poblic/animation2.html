@@ -2,22 +2,23 @@
 <html lang="fa">
   <head>
     <meta charset="UTF-8" />
-    <title>خط در حال حرکت دور دیف</title>
+    <title>خط چرخان دور دیف دایره‌ای</title>
     <style>
       body {
-        background-color: #111;
+        background: #111;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
         margin: 0;
       }
 
-      .box {
+      .circle-box {
         position: relative;
         width: 200px;
         height: 200px;
-        background-color: #222;
+        background: #222;
+        border-radius: 23px;
         color: white;
         display: flex;
         justify-content: center;
@@ -26,62 +27,40 @@
         font-size: 18px;
       }
 
-      .border-runner {
+      .runner-wrapper {
         position: absolute;
-        background-color: #00f0ff;
-        animation: moveBorder 4s linear infinite;
+        width: 100%;
+        height: 100%;
+        animation: rotate 3s linear infinite;
       }
 
-      @keyframes moveBorder {
-        /* بالا، حرکت افقی از چپ به راست */
+      .runner-line {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 40px;
+        height: 2px;
+        background: #00f0ff;
+        transform: translateX(-50%);
+        border-radius: 1px;
+      }
+
+      @keyframes rotate {
         0% {
-          width: 40px;
-          height: 2px;
-          top: 0;
-          left: 0;
+          transform: rotate(0deg);
         }
-
-        25% {
-          width: 180px;
-          height: 12px;
-          top: 0;
-          left: 100%;
-          transform: translateX(-100%);
-        }
-
-        /* پایین، حرکت از راست به چپ */
-        50% {
-          width: 10px;
-          height: 180px;
-          top: 100%;
-          left: 100%;
-          transform: translate(-100%, -100%);
-        }
-
-        /* چپ، حرکت از پایین به بالا */
-        75% {
-          width: 2px;
-          height: 40px;
-          top: 100%;
-          left: 0;
-          transform: translateY(-100%);
-        }
-
-        /* بازگشت به بالا */
         100% {
-          width: 40px;
-          height: 2px;
-          top: 0;
-          left: 0;
-          transform: none;
+          transform: rotate(360deg);
         }
       }
     </style>
   </head>
   <body>
-    <div class="box">
+    <div class="circle-box">
       سلام دنیا
-      <div class="border-runner"></div>
+      <div class="runner-wrapper">
+        <div class="runner-line"></div>
+      </div>
     </div>
   </body>
 </html>
