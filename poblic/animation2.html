@@ -2,7 +2,7 @@
 <html lang="fa">
   <head>
     <meta charset="UTF-8" />
-    <title>خط چرخان دور دیف دایره‌ای</title>
+    <title>خط چرخان دور دیف با گوشه‌های گرد</title>
     <style>
       body {
         background: #111;
@@ -13,18 +13,19 @@
         margin: 0;
       }
 
-      .circle-box {
+      .rounded-box {
         position: relative;
         width: 200px;
         height: 200px;
         background: #222;
-        border-radius: 23px;
+        border-radius: 20px; /* گوشه‌های گرد */
         color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         font-family: sans-serif;
         font-size: 18px;
+        overflow: visible;
       }
 
       .runner-wrapper {
@@ -56,7 +57,7 @@
     </style>
   </head>
   <body>
-    <div class="circle-box">
+    <div class="rounded-box">
       سلام دنیا
       <div class="runner-wrapper">
         <div class="runner-line"></div>
