@@ -2,7 +2,7 @@
 <html lang="fa">
   <head>
     <meta charset="UTF-8" />
-    <title>خط متحرک دور دیف</title>
+    <title>خط در حال حرکت دور دیف</title>
     <style>
       body {
         background-color: #111;
@@ -28,38 +28,52 @@
 
       .border-runner {
         position: absolute;
-        width: 20px;
-        height: 2px;
         background-color: #00f0ff;
-        animation: rotateBorder 4s linear infinite;
-        transform-origin: center;
+        animation: moveBorder 4s linear infinite;
       }
 
-      @keyframes rotateBorder {
+      @keyframes moveBorder {
+        /* بالا، حرکت افقی از چپ به راست */
         0% {
+          width: 40px;
+          height: 2px;
           top: 0;
           left: 0;
-          transform: translateX(0) rotate(0deg);
         }
+
         25% {
+          width: 180px;
+          height: 12px;
           top: 0;
           left: 100%;
-          transform: translateX(-100%) rotate(0deg);
+          transform: translateX(-100%);
         }
+
+        /* پایین، حرکت از راست به چپ */
         50% {
+          width: 10px;
+          height: 180px;
           top: 100%;
           left: 100%;
-          transform: translate(-100%, -100%) rotate(130deg);
+          transform: translate(-100%, -100%);
         }
+
+        /* چپ، حرکت از پایین به بالا */
         75% {
+          width: 2px;
+          height: 40px;
           top: 100%;
           left: 0;
-          transform: translateY(-100%) rotate(0deg);
+          transform: translateY(-100%);
         }
+
+        /* بازگشت به بالا */
         100% {
+          width: 40px;
+          height: 2px;
           top: 0;
           left: 0;
-          transform: translateX(0) rotate(0deg);
+          transform: none;
         }
       }
     </style>
