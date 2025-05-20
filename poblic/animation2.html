@@ -2,7 +2,7 @@
 <html lang="fa">
   <head>
     <meta charset="UTF-8" />
-    <title>انیمیشن خط روی گوشه‌های گرد</title>
+    <title>انیمیشن روی گوشه‌های گرد</title>
     <style>
       body {
         background: #111;
@@ -13,10 +13,15 @@
         margin: 0;
       }
 
-      .rounded-box {
+      .container {
         position: relative;
         width: 200px;
         height: 200px;
+      }
+
+      .rounded-box {
+        width: 100%;
+        height: 100%;
         background: #222;
         border-radius: 20px;
         color: white;
@@ -25,47 +30,45 @@
         align-items: center;
         font-family: sans-serif;
         font-size: 18px;
-        overflow: visible;
+        z-index: 1;
+        position: relative;
       }
 
-      .runner-wrapper {
+      svg {
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 2;
         width: 200px;
         height: 200px;
-        border-radius: 20px;
-        animation: rotate 4s linear infinite;
         pointer-events: none;
       }
 
       .runner-line {
-        position: absolute;
-        width: 70px;
-        height: 1px;
-        background: #00f0ff;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 1px;
+        stroke: #00f0ff;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-dasharray: 10 170;
+        animation: dashmove 4s linear infinite;
       }
 
-      @keyframes rotate {
-        from {
-          transform: rotate(0deg);
-        }
+      @keyframes dashmove {
         to {
-          transform: rotate(360deg);
+          stroke-dashoffset: -180;
         }
       }
     </style>
   </head>
   <body>
-    <div class="rounded-box">
-      سلام دنیا
-      <div class="runner-wrapper">
-        <div class="runner-line"></div>
-      </div>
+    <div class="container">
+      <div class="rounded-box">سلام دنیا</div>
+      <svg viewBox="0 0 200 200">
+        <path
+          class="runner-line"
+          d="M20,0 H180 Q200,0 200,20 V180 Q200,200 180,200 H20 Q0,200 0,180 V20 Q0,0 20,0 Z"
+          fill="none"
+        />
+      </svg>
     </div>
   </body>
 </html>
