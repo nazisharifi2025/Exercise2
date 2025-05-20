@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>چرخش کامل خط</title>
+    <style>
+      body {
+        background: #111;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+
+      .container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+      }
+
+      .rounded-box {
+        width: 100%;
+        height: 100%;
+        background: #222;
+        border-radius: 20px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 18px;
+        z-index: 1;
+        position: relative;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 200px;
+        height: 200px;
+        pointer-events: none;
+      }
+
+      .runner-path {
+        stroke: #00f0ff;
+        stroke-width: 2;
+        fill: none;
+        stroke-linecap: round;
+      }
+
+      .rotating {
+        animation: rotatePath 6s linear infinite;
+        transform-origin: center;
+      }
+
+      @keyframes rotatePath {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="rounded-box">سلام دنیا</div>
+      <svg viewBox="0 0 200 200">
+        <g class="rotating">
+          <path
+            class="runner-path"
+            d="M20,0 H180 Q200,0 200,20 V180 Q200,200 180,200 H20 Q0,200 0,180 V20 Q0,0 20,0 Z"
+          />
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>
