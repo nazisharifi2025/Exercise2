@@ -2,10 +2,10 @@
 <html lang="fa">
   <head>
     <meta charset="UTF-8" />
-    <title>خط در حال چرخش دور دیف</title>
+    <title>خط متحرک دور دیف</title>
     <style>
       body {
-        background: #111;
+        background-color: #111;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -17,7 +17,7 @@
         position: relative;
         width: 200px;
         height: 200px;
-        background: #222;
+        background-color: #222;
         color: white;
         display: flex;
         justify-content: center;
@@ -26,91 +26,40 @@
         font-size: 18px;
       }
 
-      .moving-border {
+      .border-runner {
         position: absolute;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-      }
-
-      .line {
-        position: absolute;
-        background: #00f0ff;
-      }
-
-      /* خط بالا */
-      .line.top {
-        width: 100%;
+        width: 20px;
         height: 2px;
-        top: 0;
-        left: 0;
-        animation: moveTop 4s linear infinite;
+        background-color: #00f0ff;
+        animation: rotateBorder 4s linear infinite;
+        transform-origin: center;
       }
 
-      /* خط راست */
-      .line.right {
-        width: 2px;
-        height: 100%;
-        top: 0;
-        right: 0;
-        animation: moveRight 4s linear infinite;
-        animation-delay: 1s;
-      }
-
-      /* خط پایین */
-      .line.bottom {
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        animation: moveBottom 4s linear infinite;
-        animation-delay: 2s;
-      }
-
-      /* خط چپ */
-      .line.left {
-        width: 2px;
-        height: 100%;
-        top: 0;
-        left: 0;
-        animation: moveLeft 4s linear infinite;
-        animation-delay: 3s;
-      }
-
-      /* انیمیشن‌ها برای حرکت نور */
-      @keyframes moveTop {
+      @keyframes rotateBorder {
         0% {
-          transform: translateX(-100%);
+          top: 0;
+          left: 0;
+          transform: translateX(0) rotate(0deg);
+        }
+        25% {
+          top: 0;
+          left: 100%;
+          transform: translateX(-100%) rotate(0deg);
+        }
+        50% {
+          top: 100%;
+          left: 100%;
+          transform: translate(-100%, -100%) rotate(130deg);
+        }
+        75% {
+          top: 100%;
+          left: 0;
+          transform: translateY(-100%) rotate(0deg);
         }
         100% {
-          transform: translateX(100%);
-        }
-      }
-
-      @keyframes moveRight {
-        0% {
-          transform: translateY(-100%);
-        }
-        100% {
-          transform: translateY(100%);
-        }
-      }
-
-      @keyframes moveBottom {
-        0% {
-          transform: translateX(100%);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
-
-      @keyframes moveLeft {
-        0% {
-          transform: translateY(100%);
-        }
-        100% {
-          transform: translateY(-100%);
+          top: 0;
+          left: 0;
+          transform: translateX(0) rotate(0deg);
         }
       }
     </style>
@@ -118,12 +67,7 @@
   <body>
     <div class="box">
       سلام دنیا
-      <div class="moving-border">
-        <div class="line top"></div>
-        <div class="line right"></div>
-        <div class="line bottom"></div>
-        <div class="line left"></div>
-      </div>
+      <div class="border-runner"></div>
     </div>
   </body>
 </html>
