@@ -3,34 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <title>انیمیشن خط دور دیو</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <script src="animation.js" defer></script>
     <style>
-      body {
-        background: #111;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+      .runner-line {
+        stroke-linecap: round;
+        stroke-dasharray: 160 760; /* خط دیده‌شده طولانی‌تر شد */
+        stroke-dashoffset: 0;
+        animation: moveRunnerd 4s linear infinite;
       }
 
-      .box {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        background: #222;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-family: sans-serif;
-        font-size: 18px;
-        overflow: hidden;
+      @keyframes moveRunnerd {
+        to {
+          stroke-dashoffset: -640;
+        }
       }
-
       .border-line {
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background: #00f0ff;
+        background: pink;
         animation: moveAround 4s linear infinite;
       }
 
@@ -38,42 +27,63 @@
         0% {
           top: 0;
           left: 0;
-          width: 100%;
-          height: 2px;
+          width: 200px;
+          height: 200px;
         }
         25% {
           top: 0;
           left: 100%;
-          width: 2px;
-          height: 100%;
+          width: 200px;
+          height: 200px;
         }
         50% {
           top: 100%;
           left: 100%;
-          width: 100%;
-          height: 2px;
+          width: 200px;
+          height: 200px;
           transform: translateY(-100%);
         }
         75% {
           top: 100%;
           left: 0;
-          width: 2px;
-          height: 100%;
+          width: 200px;
+          height: 200px;
           transform: translateY(-100%);
         }
         100% {
           top: 0;
           left: 0;
-          width: 100%;
-          height: 2px;
+          width: 200px;
+          height: 200px;
         }
       }
     </style>
   </head>
-  <body>
-    <div class="box">
-      سلام دنیا
-      <div class="border-line"></div>
+  <body class="h-screen w-[90%] bg-black flex justify-center items-center">
+    <div class="relative h-[200px] w-[200px]" id="hidden">
+      <div
+        class="h-[100%] w-[100%] rounded-2xl relative flex text-white justify-center items-center text-2xl -z-0 shadow-md shadow-pink-500"
+      >
+        سلام دنیا
+      </div>
+      <svg
+        viewBox="0 0 200 200"
+        class="h-[200px] w-[200px] absolute top-0 right-0 z-40 pointer-events-none"
+      >
+        <path
+          class="stroke-pink-500 stroke-[6] fill-none runner-line"
+          d="M20,0 H180 Q200,0 200,20 V180 Q200,200 180,200 H20 Q0,200 0,180 V20 Q0,0 20,0 Z"
+        />
+      </svg>
+    </div>
+    <div
+      id="clickme"
+      class="h-[130px] w-[200px] bg-pink-200 rounded-2xl flex justify-center items-center text-2xl font-bold rounded-t-none absolute top-[45.3%]"
+    >
+      <h1>Click me</h1>
+    </div>
+    <div id="flex" class="h-screen w-[80%] mx-auto relative hidden">
+      <div class="h-[200px] w-[200px] border-line absolute"></div>
     </div>
   </body>
 </html>
