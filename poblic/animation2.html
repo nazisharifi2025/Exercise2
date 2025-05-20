@@ -2,7 +2,7 @@
 <html lang="fa">
   <head>
     <meta charset="UTF-8" />
-    <title>انیمیشن روی گوشه‌های گرد</title>
+    <title>حرکت خط روی مسیر گرد</title>
     <style>
       body {
         background: #111;
@@ -43,18 +43,19 @@
         height: 200px;
         pointer-events: none;
       }
-
       .runner-line {
         stroke: #00f0ff;
-        stroke-width: 2;
+        stroke-width: 6; /* ضخامت بیشتر */
+        fill: none;
         stroke-linecap: round;
-        stroke-dasharray: 10 170;
-        animation: dashmove 4s linear infinite;
+        stroke-dasharray: 100 540; /* خط دیده‌شده طولانی‌تر شد */
+        stroke-dashoffset: 0;
+        animation: moveRunner 4s linear infinite;
       }
 
-      @keyframes dashmove {
+      @keyframes moveRunner {
         to {
-          stroke-dashoffset: -180;
+          stroke-dashoffset: -640;
         }
       }
     </style>
@@ -66,7 +67,6 @@
         <path
           class="runner-line"
           d="M20,0 H180 Q200,0 200,20 V180 Q200,200 180,200 H20 Q0,200 0,180 V20 Q0,0 20,0 Z"
-          fill="none"
         />
       </svg>
     </div>
