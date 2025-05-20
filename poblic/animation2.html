@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>خط در حال چرخش دور دیف</title>
+    <style>
+      body {
+        background: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .box {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: #222;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 18px;
+      }
+
+      .moving-border {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .line {
+        position: absolute;
+        background: #00f0ff;
+      }
+
+      /* خط بالا */
+      .line.top {
+        width: 100%;
+        height: 2px;
+        top: 0;
+        left: 0;
+        animation: moveTop 4s linear infinite;
+      }
+
+      /* خط راست */
+      .line.right {
+        width: 2px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        animation: moveRight 4s linear infinite;
+        animation-delay: 1s;
+      }
+
+      /* خط پایین */
+      .line.bottom {
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        animation: moveBottom 4s linear infinite;
+        animation-delay: 2s;
+      }
+
+      /* خط چپ */
+      .line.left {
+        width: 2px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        animation: moveLeft 4s linear infinite;
+        animation-delay: 3s;
+      }
+
+      /* انیمیشن‌ها برای حرکت نور */
+      @keyframes moveTop {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      @keyframes moveRight {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+
+      @keyframes moveBottom {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes moveLeft {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      سلام دنیا
+      <div class="moving-border">
+        <div class="line top"></div>
+        <div class="line right"></div>
+        <div class="line bottom"></div>
+        <div class="line left"></div>
+      </div>
+    </div>
+  </body>
+</html>
