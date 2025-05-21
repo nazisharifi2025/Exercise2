@@ -343,6 +343,9 @@
   .justify-evenly {
     justify-content: space-evenly;
   }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
