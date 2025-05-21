@@ -7,30 +7,7 @@
     <link rel="stylesheet" href="../src/output.css" />
   </head>
   <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch -->
-  <body>
-      <button
-          onclick="jenertorpassword()"
-          class="w-[30%] py-2 shadow-md shadow-gray-500 hover:shadow-md"
-        >
-          Generate Password
-        </button>
-      </div>
-      <div
-        class="shadow-md shadow-gray-500 flex justify-center items-center py-3 px-6"
-        id="result"
-      ></div>
-      <script>
-        function jenertorpassword() {
-  const password =
-    "ABCDEFGHIJKLMNOPQWXYZabcdefghijklmnopqwxyz123456789!@#$%^&*(){}|?";
-  let gPassword = "";
-  for (let a = 0; a < 9; a++) {
-    const randomindex = Math.floor(Math.random() * password.length);
-    gPassword += password[randomindex];
-  }
-  document.getElementById("result").innerText = gPassword;
-}
-
-      </script>
+  <body class="bg-white flex justify-center items-center w-full h-screen">
+    <div class=""></div>
   </body>
 </html>
