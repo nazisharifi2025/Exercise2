@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="../src/output.css" />
     <script src="oop.js" defer></script>
   </head>
-  <body class="bg-[url(../img/imgs1.jpg)] h-screen w-full bg-cover">
+  <body
+    class="bg-[url(../img/imgs1.jpg)] h-screen bg-fixed overflow-y-scroll w-full bg-cover"
+  >
     <div
       class="h-[90vh] my-9 w-[40%] bg-white shadow-md relative shadow-gray-400 gap-7 flex flex-col justify-center items-center rounded-md mx-auto"
     >
-      <h1 class="text-3xl font-bold text-center">LOGIN PAGE</h1>
+      <h1 class="text-3xl font-bold text-center">Generate Password</h1>
       <p class="text-center w-[70%] font-serif" id="matn">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, cumque
         unde fugiat expedita repellat numquam non! Sit ratione sint quo. Impedit
@@ -32,7 +34,7 @@
         </button>
       </div>
       <div
-        class="shadow-md shadow-gray-500 flex justify-center items-center py-3 px-6"
+        class="shadow-md shadow-gray-500 hidden justify-center items-center py-3 px-6"
         id="result"
       ></div>
       <button
@@ -59,5 +61,8 @@
     >
       COPYED
     </div>
+    <div
+      class="h-[50vh] w-[80%] mx-auto bg-white rounded-md shadow-md shadow-gray-400 flex justify-evenly"
+    ></div>
   </body>
 </html>

@@ -2,6 +2,7 @@ const masseg = document.getElementById("masseg");
 const text = document.getElementById("text");
 const clickme = document.getElementById("clickme");
 const matn = document.getElementById("matn");
+const result = document.getElementById("result");
 clickme.addEventListener("click", () => {
   // text.select(); // اینجا اصلاح شده
   // text.setSelectionRange(0, 99999); // برای موبایل
@@ -16,6 +17,8 @@ clickme.addEventListener("click", () => {
   text.value = "";
 });
 function jenertorpassword() {
+  result.classList.remove("hidden");
+  result.classList.add("flex");
   const password =
     "ABCDEFGHIJKLMNOPQWXYZabcdefghijklmnopqwxyz123456789!@#$%^&*(){}|?";
   let gPassword = "";
@@ -23,7 +26,7 @@ function jenertorpassword() {
     const randomindex = Math.floor(Math.random() * password.length);
     gPassword += password[randomindex];
   }
-  document.getElementById("result").innerText = gPassword;
+  result.innerText = gPassword;
 }
 
 // navigator.clipboard.writeText("این متن کپی می‌شود")
