@@ -56,4 +56,12 @@ button.addEventListener("click", () => {
     let time = dis / faselaha.kabulqandahar;
     console.log(time);
   }
+   else if (
+    (selectop1.value === "کابل", selectop2.value === "جلال آباد") ||
+    (selectop1.value === "جلال آباد, selectop2.value === "کابل")
+  ) {
+    let dis = parseInt(input.value);
+    let time = dis / faselaha.kabulqandahar;
+    console.log(time);
+  }
 });
