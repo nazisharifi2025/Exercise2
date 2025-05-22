@@ -16,30 +16,107 @@
       class="h-screen w-full overflow-y-scroll bg-cover bg-fixed bg-[url(../img/bg1.jpg)] flex justify-center items-center"
     >
       <div
-        class="h-[90%] flex flex-col w-[70%] px-6 outline-8 outline-transparent rounded-2xl bg-[url(../img/bg2.jpg)] bg-cover mx-auto"
+        class="w-[90%] h-[90%] flex flex-col justify-center items-center rounded-2xl bg-[url(../img/bg2.jpg)] bg-cover"
       >
-        <div class="flex justify-between my-2 w-full text-white">
-          <span class="material-symbols-outlined" style="font-size: 30px">
-            arrow_back
-          </span>
-          <span class="material-symbols-outlined" style="font-size: 30px">
-            close
-          </span>
-        </div>
-        <div class="w-full flex">
-          <div class="flex flex-col">
-            <div>
-              <button></button>
-            </div>
-            <div class=""></div>
+        <div
+          class="h-[90%] flex shadow-xs shadow-black flex-col gap-4 w-[90%] px-2 py-1.5 outline-8 outline-transparent rounded-2xl bg-[url(../img/bg2.jpg)] bg-cover mx-auto"
+        >
+          <div class="flex justify-between w-full text-orange-100">
+            <span class="material-symbols-outlined" style="font-size: 30px">
+              house
+            </span>
+            <span class="material-symbols-outlined" style="font-size: 30px">
+              close
+            </span>
           </div>
+          <h1 class="text-4xl text-center text-orange-100 font-bold">
+            فاصله یاب
+          </h1>
+          <!-- icons -->
+          <div class="flex w[80%] ml-20 space-x-1.5">
+            <button
+              class="outline-0 bg-orange-100 hover:shadow-xs w-[140px] py-1 rounded-tl-2xl rounded-br-2xl shadow-md shadow-black"
+            >
+              زمان
+            </button>
+            <button
+              class="outline-0 bg-orange-100 hover:shadow-xs w-[140px] py-1 rounded-tl-2xl rounded-br-2xl shadow-md shadow-black"
+            >
+              فاصله
+            </button>
+          </div>
+          <div class="w-full flex gap-12 justify-center items-center">
+            <div class="flex flex-col w-[40%]">
+              <div
+                class="w-full font-bold h-[50vh] rounded-2xl bg-[url(../img/bg2.jpg)] bg-cover shadow-xs shadow-black flex flex-col justify-center gap-4 items-center"
+              >
+                <select
+                  dir="rtl"
+                  name="KABUl"
+                  id="selectop1"
+                  class="outline-0 bg-orange-100 w-[250px] py-2 rounded-tl-2xl rounded-br-2xl"
+                >
+                  <option value="">غزنی</option>
+                  <option value="">کابل</option>
+                  <option value="">هرات</option>
+                  <option value="">کندهار</option>
+                  <option value="">مزار شریف</option>
+                  <option value="">جوزجان</option>
+                  <option value="">بامیان</option>
+                </select>
+                <select
+                  name="KABUl"
+                  id="selectop2"
+                  dir="rtl"
+                  class="outline-0 bg-orange-100 w-[250px] py-2 rounded-tl-2xl rounded-br-2xl"
+                >
+                  <option value="">غزنی</option>
+                  <option value="">کابل</option>
+                  <option value="">هرات</option>
+                  <option value="">کندهار</option>
+                  <option value="">مزار شریف</option>
+                  <option value="">جوزجان</option>
+                  <option value="">بامیان</option>
+                </select>
+                <div
+                  class="w-full mx-auto flex flex-col justify-center items-center"
+                  dir="rtl"
+                >
+                  <label for="text" class="text-right font-bold text-white"
+                    >سرعت را وارد کنید</label
+                  >
+                  <input
+                    id="input"
+                    value="20"
+                    type="text"
+                    class="outline-0 bg-orange-100 w-[250px] py-2 rounded-tl-2xl rounded-br-2xl"
+                  />
+                </div>
+                <button
+                  id="button"
+                  class="outline-0 bg-orange-100 hover:shadow-xs w-[250px] py-2 rounded-tl-2xl rounded-br-2xl shadow-md shadow-black"
+                >
+                  دریافت فاصله یاب
+                </button>
+                <h1 class="text-2xl text-center text-orange-100 font-bold">
+                  <span id="hou">00</span>
+                  <span>:</span>
+                  <span id="min">00</span>
+                  <span>:</span>
+                  <span id="secon">00</span>
+                </h1>
+              </div>
+            </div>
 
-          <div class="h-[60%]">
-            <img
-              src="../img/Transparent-PNG-Afganistan-Map-2.png"
-              class="h-full"
-              alt=""
-            />
+            <div
+              class="h-[50vh] w-[40%] rounded-2xl bg-[url(../img/bg2.jpg)] bg-cover shadow-xs shadow-black"
+            >
+              <img
+                src="../img/Transparent-PNG-Afganistan-Map-2.png"
+                class="h-full"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
