@@ -25,7 +25,6 @@ let faselaha = {
   kabulmazar: 426,
   kabulherat: 1070,
   kabuljalalabad: 149,
-  ghaznimazar: this.faselaha.kabulGhazni + this.kabulmazar,
 };
 button.addEventListener("click", () => {
   if (
@@ -33,15 +32,14 @@ button.addEventListener("click", () => {
     (selectop1.value === "غزنی" && selectop2.value === "کابل")
   ) {
     let dis = parseFloat(input.value);
-    let time = dis / isen;
+    let time = dis / faselaha.kabulGhazni;
     console.log(time);
   } else if (
     (selectop1.value === "مزار شریف" && selectop2.value === "کابل") ||
-    (selectop1.value === "کابل" && selectop2.value === "غزنی")
+    (selectop1.value === "کابل" && selectop2.value === "مزار شریف")
   ) {
     let dis = parseInt(input.value);
-    let isen = 426;
-    let time = dis / isen;
+    let time = dis / ;
     console.log(time);
   } else if (
     (selectop1.value === "غزنی", selectop2.value === "هرات") ||
