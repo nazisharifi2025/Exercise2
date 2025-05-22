@@ -15,10 +15,35 @@ setInterval(() => {
 }, 1000);
 // ساعت تمومه
 // شروع سرعت
-const button = document.getElementById("butten");
+const button = document.getElementById("button");
+const input = document.getElementById("input");
+const selectop1 = document.getElementById("selectop1");
+const selectop2 = document.getElementById("selectop2");
 
 button.addEventListener("click", () => {
-  const input = document.getElementById("input").value;
-  const selectop1 = document.getElementById("selectop1").value;
-  const selectop2 = document.getElementById("selectop2").value;
+  if (
+    (selectop1.value === "کابل" && selectop2.value === "غزنی") ||
+    (selectop1.value === "غزنی" && selectop2.value === "کابل")
+  ) {
+    let dis = parseFloat(input.value);
+    let isen = 150;
+    let time = dis / isen;
+    console.log(time);
+  } else if (
+    (selectop1.value === "مزار شریف" && selectop2.value === "کابل") ||
+    (selectop1.value === "کابل" && selectop2.value === "غزنی")
+  ) {
+    let dis = parseInt(input.value);
+    let isen = 426;
+    let time = dis / isen;
+    console.log(time);
+  } else if (
+    (selectop1.value === "غزنی", selectop2.value === "هرات") ||
+    (selectop1.value === "هرات", selectop2.value === "غزنی")
+  ) {
+    let dis = parseInt(input.value);
+    let isen = 260;
+    let time = dis / isen;
+    console.log(time);
+  }
 });
