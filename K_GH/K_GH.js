@@ -19,14 +19,20 @@ const button = document.getElementById("button");
 const input = document.getElementById("input");
 const selectop1 = document.getElementById("selectop1");
 const selectop2 = document.getElementById("selectop2");
-
+let faselaha = {
+  kabulqandahar: 501,
+  kabulGhazni: 148,
+  kabulmazar: 426,
+  kabulherat: 1070,
+  kabuljalalabad: 149,
+  ghaznimazar: this.faselaha.kabulGhazni + this.kabulmazar,
+};
 button.addEventListener("click", () => {
   if (
     (selectop1.value === "کابل" && selectop2.value === "غزنی") ||
     (selectop1.value === "غزنی" && selectop2.value === "کابل")
   ) {
     let dis = parseFloat(input.value);
-    let isen = 150;
     let time = dis / isen;
     console.log(time);
   } else if (
