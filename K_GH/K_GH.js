@@ -16,6 +16,9 @@ setInterval(() => {
 // ساعت تمومه
 // شروع سرعت
 const button = document.getElementById("butten");
-const input = document.getElementById("input");
-const selectop1 = document.getElementById("selectop1");
-const selectop2 = document.getElementById("selectop2");
+
+button.addEventListener("click", () => {
+  const input = document.getElementById("input").value;
+  const selectop1 = document.getElementById("selectop1").value;
+  const selectop2 = document.getElementById("selectop2").value;
+});
