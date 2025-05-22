@@ -48,5 +48,12 @@ button.addEventListener("click", () => {
     let dis = parseInt(input.value);
     let time = dis / faselaha.kabulherat;
     console.log(time);
+  } else if (
+    (selectop1.value === "کابل", selectop2.value === "قندهار") ||
+    (selectop1.value === "قندهار", selectop2.value === "کابل")
+  ) {
+    let dis = parseInt(input.value);
+    let time = dis / faselaha.kabulqandahar;
+    console.log(time);
   }
 });
