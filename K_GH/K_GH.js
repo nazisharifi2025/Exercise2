@@ -100,7 +100,7 @@ button.addEventListener("click", () => {
     (selectop1.value === "بامیان" && selectop2.value === "کابل")
   ) {
     let dis = parseInt(input.value);
-    let time = dis / faselaha.kabuljalalabad;
+    let time = dis / faselaha.kabulBamian;
     div.innerHTML = `
      شما از ${selectop1.value}
     به طرف  ${selectop2.value}
