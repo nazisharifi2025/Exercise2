@@ -36,10 +36,10 @@ button.addEventListener("click", () => {
     let dis = parseFloat(input.value);
     let time = dis / faselaha.kabulGhazni;
     div.innerHTML = `
-    شما از ${selectop1}
-    به طرف  ${selectop2}
-    با سرعت ${dis}
-    در مدت ${time}
+    شما از ${selectop1.value}
+    به طرف  ${selectop2.value}
+    با سرعت ${dis} کیلو متر
+    در مدت ${time} ساعت
     خواهید رسید
     `;
   } else if (
