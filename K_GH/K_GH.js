@@ -99,5 +99,6 @@ button.addEventListener("click", () => {
     (selectop1.value === "جلال آباد" && selectop2.value === "کابل")
   ) {
     let dis = parseInt(input.value);
+    let time = dis / faselaha.kabuljalalabad;
   }
 });
