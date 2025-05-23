@@ -94,5 +94,9 @@ button.addEventListener("click", () => {
     در مدت ${time} ساعت
     خواهید رسید
     `;
+  } else if (
+    (selectop1.value === "کابل" && selectop2.value === "جلال آباد") ||
+    (selectop1.value === "جلال آباد" && selectop2.value === "کابل")
+  ) {
   }
 });
