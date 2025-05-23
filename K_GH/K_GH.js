@@ -28,13 +28,14 @@ let faselaha = {
   kabuljalalabad: 149,
 };
 button.addEventListener("click", () => {
+  div.classList.remove("hidden");
   if (
     (selectop1.value === "کابل" && selectop2.value === "غزنی") ||
     (selectop1.value === "غزنی" && selectop2.value === "کابل")
   ) {
     let dis = parseFloat(input.value);
     let time = dis / faselaha.kabulGhazni;
-    console.log(time);
+    div.innerHTML = time;
   } else if (
     (selectop1.value === "مزار شریف" && selectop2.value === "کابل") ||
     (selectop1.value === "کابل" && selectop2.value === "مزار شریف")
