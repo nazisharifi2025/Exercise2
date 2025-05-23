@@ -74,7 +74,13 @@ button.addEventListener("click", () => {
   ) {
     let dis = parseInt(input.value);
     let time = dis / faselaha.kabulqandahar;
-    console.log(time);
+    div.innerHTML = `
+    شما از ${selectop1.value}
+    به طرف  ${selectop2.value}
+    با سرعت ${dis} کیلو متر
+    در مدت ${time} ساعت
+    خواهید رسید
+    `;
   } else if (
     (selectop1.value === "کابل" && selectop2.value === "جلال آباد") ||
     (selectop1.value === "جلال آباد" && selectop2.value === "کابل")
