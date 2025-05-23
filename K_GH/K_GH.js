@@ -100,6 +100,12 @@ button.addEventListener("click", () => {
   ) {
     let dis = parseInt(input.value);
     let time = dis / faselaha.kabuljalalabad;
-     div.innerHTML = `
+    div.innerHTML = `
+     شما از ${selectop1.value}
+    به طرف  ${selectop2.value}
+    با سرعت ${dis} کیلو متر
+    در مدت ${time} ساعت
+    خواهید رسید
+    `;
   }
 });
