@@ -100,5 +100,6 @@ button.addEventListener("click", () => {
   ) {
     let dis = parseInt(input.value);
     let time = dis / faselaha.kabuljalalabad;
+     div.innerHTML = `
   }
 });
