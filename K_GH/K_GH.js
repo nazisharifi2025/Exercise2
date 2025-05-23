@@ -19,6 +19,7 @@ const button = document.getElementById("button");
 const input = document.getElementById("input");
 const selectop1 = document.getElementById("selectop1");
 const selectop2 = document.getElementById("selectop2");
+const div = document.getElementById("div");
 let faselaha = {
   kabulqandahar: 501,
   kabulGhazni: 148,
