@@ -6,4 +6,7 @@
   .p {
     @apply text-center mx-auto font-normal;
   }
+  .cotener {
+    @apply flex flex-wrap justify-center items-center gap-4 mx-auto;
+  }
 }
