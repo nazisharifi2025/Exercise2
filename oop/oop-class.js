@@ -35,6 +35,7 @@ class singelproduct {
     return divChilde;
   }
 }
+
 class AddtoCart {
   iteme = [];
   render() {
