@@ -1,1 +1,9 @@
 @import "tailwindcss";
+@layer components {
+  .div {
+    @apply bg-white shadow-md text-xl font-bold py-5 shadow-black h-[350px] w-[290px] flex flex-col justify-center items-center gap-3;
+  }
+  .p {
+    @apply text-center mx-auto font-normal;
+  }
+}
