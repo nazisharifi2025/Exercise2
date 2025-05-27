@@ -26,7 +26,7 @@ const items = [
 
 let current = 0;
 
-function shoingitem() {
+function shoingitem(index) {
   const slide = items[current];
   slider.classList.add("bg-[url(../img/imgs1.jpg)]");
   const h2 = document.createElement("h2");
@@ -39,3 +39,9 @@ function shoingitem() {
   slide.appendChild(p);
   slider.appendChild(h1);
 }
+shoingitem(currenttime);
+let currenttime = 0;
+setInterval(() => {
+  currenttime = (currenttime + 1) % items.length;
+  shoingitem(currenttime);
+}, 2000);
