@@ -3,22 +3,22 @@ const slider = document.getElementById("slider");
 const items = [
   {
     Imageurl: "../img/gallery_01.jpg",
-    titel: "to by",
+    titel: "Brecfast",
     slidebtn: "coffeteria",
     description:
       " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo voluptatibus sapiente illo doloremque, ",
   },
   {
     Imageurl: "../img/img-hero.jpg",
-    titel: "Product",
-    slidebtn: "coffe",
+    titel: "Lanch",
+    slidebtn: "Menu",
     description:
       " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo voluptatibus sapiente illo doloremque, ",
   },
   {
     Imageurl: "../img/hero.png",
-    titel: "Products",
-    slidebtn: "coffe2",
+    titel: "Dener",
+    slidebtn: "MenuClassic",
     description:
       " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo voluptatibus sapiente illo doloremque, ",
   },
@@ -32,14 +32,15 @@ function shoingitem(index) {
   slider.style.backgroundImage = `url('${slide.Imageurl}')`;
   const h2 = document.createElement("h2");
   h2.textContent = slide.titel;
+
+  const h1 = document.createElement("h1");
+  h1.textContent = slide.slidebtn;
   const p = document.createElement("p");
   p.classList.add("w-[50%]");
   p.textContent = slide.description;
-  const h1 = document.createElement("h1");
-  h1.textContent = slide.slidebtn;
   slider.appendChild(h2);
-  slider.appendChild(p);
   slider.appendChild(h1);
+  slider.appendChild(p);
 }
 
 let currenttime = 0;
