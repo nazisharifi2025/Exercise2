@@ -514,6 +514,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .bg-\[url\(\.\.\/img\/a1\.jpg\)\] {
+    background-image: url(../img/a1.jpg);
+  }
   .bg-\[url\(\.\.\/img\/bg1\.jpg\)\] {
     background-image: url(../img/bg1.jpg);
   }
