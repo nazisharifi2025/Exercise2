@@ -1,4 +1,6 @@
 const slider = document.getElementById("slider");
+const right = document.getElementById("right");
+const left = document.getElementById("left");
 
 const items = [
   {
