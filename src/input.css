@@ -1,4 +1,10 @@
 @import "tailwindcss";
+@theme {
+  --color-bgcon: rgba(255, 255, 255, 0.3);
+  --color-bgfi: rgba(255, 255, 255, 0.1);
+  --color-naz: rgba(255, 255, 255, 0.5);
+  --color-coffe: rgba(255, 255, 255, 0.4);
+}
 @layer components {
   .div {
     @apply bg-white shadow-md text-xl font-bold py-5 shadow-black h-[350px] w-[290px] flex flex-col justify-center items-center gap-3;
