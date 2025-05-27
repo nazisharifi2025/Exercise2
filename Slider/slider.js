@@ -2,21 +2,21 @@ const slider = document.getElementById("slider");
 
 const items = [
   {
-    Imageurl: "../img/bg2.jpg",
+    Imageurl: "../img/gallery_01.jpg",
     titel: "to by",
     slidebtn: "coffeteria",
     description:
       " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo voluptatibus sapiente illo doloremque, ",
   },
   {
-    Imageurl: "../img/bg1.jpg",
+    Imageurl: "../img/img-hero.jpg",
     titel: "Product",
     slidebtn: "coffe",
     description:
       " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo voluptatibus sapiente illo doloremque, ",
   },
   {
-    Imageurl: "../img/bgbook.jpg",
+    Imageurl: "../img/hero.png",
     titel: "Products",
     slidebtn: "coffe2",
     description:
@@ -33,6 +33,7 @@ function shoingitem(index) {
   const h2 = document.createElement("h2");
   h2.textContent = slide.titel;
   const p = document.createElement("p");
+  p.classList.add("w-[50%]");
   p.textContent = slide.description;
   const h1 = document.createElement("h1");
   h1.textContent = slide.slidebtn;
