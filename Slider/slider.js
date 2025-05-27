@@ -51,3 +51,12 @@ setInterval(() => {
   currenttime = (currenttime + 1) % items.length;
   shoingitem(currenttime);
 }, 2000);
+
+right.addEventListener("click", () => {
+  currenttime = (currenttime + 1) % items.length;
+  shoingitem(currenttime);
+});
+left.addEventListener("click", () => {
+  currenttime = (currenttime - 1 + items.length) % items.length;
+  shoingitem(currenttime);
+});
