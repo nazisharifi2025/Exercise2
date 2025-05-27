@@ -18,6 +18,12 @@
       <div class="border border-red-500 text-red-500 py-5 hidden" id="divError">
         Error Filde. Please Enter Your Email Address
       </div>
+      <div
+        class="border border-red-500 text-red-500 py-5 hidden"
+        id="Emailerror"
+      >
+        Error Filde. Please Enter Your Email Address
+      </div>
       <div class="flex flex-col font-bold gap-2">
         <label for="name" class="mx-20 my- text-xl">Name</label>
         <input
@@ -31,7 +37,7 @@
         <label for="name" class="mx-20 my- text-xl">Last Name</label>
         <input
           id="LastName"
-          type="number"
+          type="text"
           placeholder="Enter your Last name"
           class="h-12 mx-auto rounded-md w-[80%] shadow-md shadow-gray-900 outline-0"
         />
@@ -40,7 +46,7 @@
         <label for="name" class="mx-20 my- text-xl">Number</label>
         <input
           id="number"
-          type="text"
+          type="number"
           placeholder="Enter your Phone Number"
           class="h-12 mx-auto rounded-md w-[80%] shadow-md shadow-gray-900 outline-0"
         />
@@ -60,6 +66,10 @@
       >
         Submit
       </button>
+      <div
+        class="shadow-md shadow-gray-700 w-full h-fit py-3 hidden"
+        id="shoingdiv"
+      ></div>
     </div>
   </body>
 </html>
