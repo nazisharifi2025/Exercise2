@@ -16,6 +16,16 @@ btnSave.addEventListener("click", () => {
     Email.value !== ""
   ) {
     divshoing.classList.remove("hidden");
+    divError.classList.add("hidden");
+    name2.classList.remove("border");
+    name2.classList.remove("border-red-500");
+    lastName.classList.remove("border");
+    lastName.classList.remove("border-red-500");
+    number.classList.remove("border");
+    number.classList.remove("border-red-500");
+    Email.classList.remove("border");
+    Email.classList.remove("border-red-500");
+    // if parint
     if (
       name2.value.length >= 2 &&
       name2.value.length <= 10 &&
@@ -24,7 +34,11 @@ btnSave.addEventListener("click", () => {
       const h1 = document.createElement("h1");
       h1.textContent = name2.value;
       divshoing.appendChild(h1);
+    } else {
+      name2.classList.remove("border");
+      name2.classList.remove("border-red-500");
     }
+
     if (lastName.value.length >= 2 && lastName.value.length <= 10) {
       const h2 = document.createElement("h1");
       h2.textContent = lastName.value;
@@ -64,16 +78,5 @@ btnSave.addEventListener("click", () => {
     number.classList.add("border-red-500");
     Email.classList.add("border");
     Email.classList.add("border-red-500");
-    setInterval(() => {
-      divError.classList.add("hidden");
-      name2.classList.remove("border");
-      name2.classList.remove("border-red-500");
-      lastName.classList.remove("border");
-      lastName.classList.remove("border-red-500");
-      number.classList.remove("border");
-      number.classList.remove("border-red-500");
-      Email.classList.remove("border");
-      Email.classList.remove("border-red-500");
-    }, 9000);
   }
 });
