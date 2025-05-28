@@ -15,7 +15,7 @@ class Animal {
 // Childe
 class Cat extends Animal {
   eat() {
-    console.log(this.name + "can eat food");
+    super.eat();
   }
 }
 const newcat = new Cat("my baby cat", 2, "4K");
