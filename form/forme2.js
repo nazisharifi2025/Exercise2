@@ -10,6 +10,8 @@ const divshoing = document.getElementById("shoingdiv");
 
 btnSave.addEventListener("click", () => {
   divshoing.classList.remove("hidden");
+
+  // for name
   if (
     (name2.value.length >= 2 &&
       name2.value.length <= 10 &&
@@ -28,27 +30,55 @@ btnSave.addEventListener("click", () => {
     const h1 = document.createElement("h1");
     h1.textContent = name2.value;
     divshoing.appendChild(h1);
+  } else {
+    name2.classList.add("border");
+    name2.classList.add("border-red-500");
   }
+
+  // for last name
   if (
-    lastName.value.length >= 2 &&
-    lastName.value.length <= 10 &&
-    lastName.value !== ""
+    name2.value.length >= 2 &&
+    name2.value.length <= 10 &&
+    name2.value !== ""
   ) {
     const h2 = document.createElement("h1");
     h2.textContent = lastName.value;
     divshoing.appendChild(h2);
   }
+
+  // for number
   if (
-    number.value.length >= 2 &&
-    number.value.length <= 10 &&
-    number.value !== ""
+    (name2.value.length >= 2 &&
+      name2.value.length <= 10 &&
+      name2.value !== "" &&
+      lastName.value.length >= 2 &&
+      lastName.value.length <= 10 &&
+      lastName.value !== "" &&
+      number.value.length >= 2 &&
+      number.value.length <= 10 &&
+      number.value !== "" &&
+      Email.value.endsWith("@gmail.com")) ||
+    Email.value.endsWith("@outlook.com") ||
+    Email.value.endsWith("@incloud.com") ||
+    (Email.value.endsWith("@yahoo.com") && Email.value !== "")
   ) {
     const h3 = document.createElement("h1");
     h3.textContent = number.value;
     divshoing.appendChild(h3);
   }
+
+  // for email
   if (
-    Email.value.endsWith("@gmail.com") ||
+    (name2.value.length >= 2 &&
+      name2.value.length <= 10 &&
+      name2.value !== "" &&
+      lastName.value.length >= 2 &&
+      lastName.value.length <= 10 &&
+      lastName.value !== "" &&
+      number.value.length >= 2 &&
+      number.value.length <= 10 &&
+      number.value !== "" &&
+      Email.value.endsWith("@gmail.com")) ||
     Email.value.endsWith("@outlook.com") ||
     Email.value.endsWith("@incloud.com") ||
     (Email.value.endsWith("@yahoo.com") && Email.value !== "")
@@ -65,6 +95,7 @@ btnSave.addEventListener("click", () => {
   lastName.value = "";
   number.value = "";
   Email.value = "";
+
   // } else {
   //   divError.classList.remove("hidden");
 
