@@ -24,4 +24,9 @@ newcat.eat();
 function Animal2(name, age, gender) {
   this.name = name;
   this.age = age;
+  this.gender = gender;
+  let color = "red";
+  let showingcolor.function newPerson(params) {
+    
+  }
 }
