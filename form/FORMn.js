@@ -28,7 +28,7 @@ btnSave.addEventListener("click", () => {
   }
 
   // اعتبارسنجی شماره
-  if (number.value.trim().length === 10) {
+  if (number.value.trim().length < 2 || number.value.trim().length > 10) {
     number.classList.add("border", "border-red-500");
     isValid = false;
   }
