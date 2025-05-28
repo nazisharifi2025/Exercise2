@@ -10,10 +10,20 @@ const divshoing = document.getElementById("shoingdiv");
 
 btnSave.addEventListener("click", () => {
   if (
-    name2.value !== "" &&
-    lastName.value !== "" &&
-    number.value !== "" &&
-    Email.value !== ""
+    (name2.value !== "" &&
+      lastName.value !== "" &&
+      number.value !== "" &&
+      Email.value !== "" &&
+      Email.value.endsWith("@gmail.com")) ||
+    Email.value.endsWith("@outlook.com") ||
+    Email.value.endsWith("@incloud.com") ||
+    (Email.value.endsWith("@yahoo.com") &&
+      lastName.value.length >= 2 &&
+      lastName.value.length <= 10 &&
+      number.value.length >= 2 &&
+      number.value.length <= 10 &&
+      name2.value.length >= 2 &&
+      name2.value.length <= 10)
   ) {
     divshoing.classList.remove("hidden");
     if (
