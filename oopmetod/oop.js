@@ -21,4 +21,7 @@ class Cat extends Animal {
 const newcat = new Cat("my baby cat", 2, "4K");
 newcat.eat();
 
-function Animal2(name, age, gender) {}
+function Animal2(name, age, gender) {
+  this.name = name;
+  this.age = age;
+}
