@@ -48,8 +48,6 @@ const items = [
   },
 ];
 
-let current = 0;
-
 function shoingitem(index) {
   slider.innerHTML = "";
   const slide = items[index];
@@ -72,7 +70,7 @@ shoingitem(currenttime);
 setInterval(() => {
   currenttime = (currenttime + 1) % items.length;
   shoingitem(currenttime);
-}, 5000);
+}, 3000);
 
 right.addEventListener("click", () => {
   currenttime = (currenttime + 1) % items.length;
