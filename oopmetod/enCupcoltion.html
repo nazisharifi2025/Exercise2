@@ -16,6 +16,12 @@
       placeholder="رمز را وارد کنید"
       class="bg-transparent border-4 border-black w-[30%] py-3"
     />
+    <input
+      id="input2"
+      type="number"
+      placeholder="رمز را وارد کنید"
+      class="bg-transparent border-4 border-black w-[30%] py-3"
+    />
     <button
       class="bg-transparent border-4 border-black w-[10%] py-3 hover:bg-bgcon hover:border-2"
       id="btn"
@@ -25,9 +31,22 @@
     <script>
       const btn = document.getElementById("btn");
       const input = document.getElementById("input");
+      const input2 = document.getElementById("input2");
       btn.addEventListener("click", () => {
-        if (input.value.NaN) {
+        if (
+          (isNaN(input.value) && input.value.length > 2) ||
+          input.value.length < 10
+        ) {
           console.log("hi");
+          input.classList.remove("border-red-500");
+        } else {
+          input.classList.add("border-red-500");
+        }
+        if (input2.value.length === 10) {
+          console.log("yes");
+          input2.classList.remove("border-red-500");
+        } else {
+          input2.classList.add("border-red-500");
         }
       });
     </script>
