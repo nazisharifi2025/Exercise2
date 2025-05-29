@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../src/output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
     <script src="slider.js" defer></script>
   </head>
   <body>
     <div
-      class="w-full relative h-screen bg-[url(../img/a1.jpg)] bg-cover flex flex-col justify-center items-center text-2xl font-bold"
+      dir="rtl"
+      class="w-full relative text-white h-screen bg-[url(../img/a1.jpg)] bg-cover flex flex-col justify-center items-center text-2xl font-bold"
       id="slider"
     ></div>
     <button
       id="right"
-      class="h-12 w-12 bg-gray-500 rounded-full absolute top-72 right-6"
-    ></button>
+      class="h-12 w-12 bg-gray-500 rounded-full text-center font-bold absolute top-72 right-6"
+    >
+      <span class="material-symbols-outlined"> chevron_right </span>
+    </button>
     <button
       id="left"
-      class="h-12 w-12 bg-gray-500 rounded-full absolute top-72 left-6"
-    ></button>
+      class="h-12 w-12 bg-gray-500 rounded-full text-center font-bold absolute top-72 left-6"
+    >
+      <span class="material-symbols-outlined"> chevron_left </span>
+    </button>
   </body>
 </html>
