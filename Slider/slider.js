@@ -72,7 +72,7 @@ shoingitem(currenttime);
 setInterval(() => {
   currenttime = (currenttime + 1) % items.length;
   shoingitem(currenttime);
-}, 8000);
+}, 5000);
 
 right.addEventListener("click", () => {
   currenttime = (currenttime + 1) % items.length;
