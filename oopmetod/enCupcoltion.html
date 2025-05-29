@@ -20,10 +20,10 @@
       id="input2"
       type="number"
       placeholder="رمز را وارد کنید"
-      class="bg-transparent border-4 border-black w-[30%] py-3"
+      class="bg-transparent border-4 border-black w-[30%] py-3 outline-0"
     />
     <button
-      class="bg-transparent border-4 border-black w-[10%] py-3 hover:bg-bgcon hover:border-2"
+      class="bg-transparent border-4 border-black w-[10%] py-3 outline-0 hover:bg-bgcon hover:border-2"
       id="btn"
     >
       Submit
@@ -32,14 +32,34 @@
       const btn = document.getElementById("btn");
       const input = document.getElementById("input");
       const input2 = document.getElementById("input2");
+      class Person {
+        name;
+        lastName;
+        number;
+        constructor(name, lastName, number) {
+          this.name = name;
+          this.lastName = lastName;
+          this.number = number;
+        }
+        setName(name) {
+          this.name = name;
+        }
+        getName() {
+          console.log(this.name);
+        }
+      }
+      const newPerson = new Person();
       btn.addEventListener("click", () => {
         if (
           isNaN(input.value) &&
           input.value.length >= 2 &&
           input.value.length <= 10
         ) {
-          console.log("hi");
+          newPerson.setName(input.value);
           input.classList.remove("border-red-500");
+          newPerson.getName();
+          input.value = "";
+          input2.value = "";
         } else {
           input.classList.add("border-red-500");
         }
