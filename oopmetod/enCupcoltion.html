@@ -25,6 +25,11 @@
     <script>
       const btn = document.getElementById("btn");
       const input = document.getElementById("input");
+      btn.addEventListener("click", () => {
+        if (input.value.NaN) {
+          console.log("hi");
+        }
+      });
     </script>
   </body>
 </html>
