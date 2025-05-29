@@ -34,8 +34,9 @@
       const input2 = document.getElementById("input2");
       btn.addEventListener("click", () => {
         if (
-          (isNaN(input.value) && input.value.length > 2) ||
-          input.value.length < 10
+          isNaN(input.value) &&
+          input.value.length >= 2 &&
+          input.value.length <= 10
         ) {
           console.log("hi");
           input.classList.remove("border-red-500");
