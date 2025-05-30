@@ -15,7 +15,6 @@ btnSave.addEventListener("click", () => {
     number.value !== "" &&
     Email.value !== ""
   ) {
-    divshoing.classList.remove("hidden");
     divError.classList.add("hidden");
     name2.classList.remove("border");
     name2.classList.remove("border-red-500");
@@ -28,14 +27,15 @@ btnSave.addEventListener("click", () => {
 
     if (
       isNaN(name2.value) &&
-      name2.value.length.trime() >= 2 &&
-      name2.value.length.trime() <= 10
+      name2.value.length >= 2 &&
+      name2.value.length <= 10
     ) {
       const h1 = document.createElement("h1");
       h1.textContent = name2.value;
       divshoing.appendChild(h1);
       name2.classList.remove("border");
       name2.classList.remove("border-red-500");
+      name2.value = "";
     } else {
       name2.classList.add("border");
       name2.classList.add("border-red-500");
@@ -46,6 +46,7 @@ btnSave.addEventListener("click", () => {
       divshoing.appendChild(h2);
       lastName.classList.remove("border");
       lastName.classList.remove("border-red-500");
+      lastName.value = "";
     } else {
       lastName.classList.add("border");
       lastName.classList.add("border-red-500");
@@ -56,6 +57,7 @@ btnSave.addEventListener("click", () => {
       divshoing.appendChild(h3);
       number.classList.remove("border");
       number.classList.remove("border-red-500");
+      number.value = "";
     } else {
       number.classList.add("border");
       number.classList.add("border-red-500");
@@ -71,18 +73,13 @@ btnSave.addEventListener("click", () => {
       divshoing.appendChild(h4);
       Email.classList.remove("border");
       Email.classList.remove("border-red-500");
+      Email.value = "";
     } else {
       Emailerror.classList.remove("hidden");
       Email.classList.add("border");
       Email.classList.add("border-red-500");
     }
-    name2.value = "";
-    lastName.value = "";
-    number.value = "";
-    Email.value = "";
   } else {
-    divError.classList.remove("hidden");
-
     name2.classList.add("border");
     name2.classList.add("border-red-500");
     lastName.classList.add("border");
