@@ -270,6 +270,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-1 {
+    margin-block: calc(var(--spacing) * 1);
+  }
   .my-1\.5 {
     margin-block: calc(var(--spacing) * 1.5);
   }
@@ -299,6 +302,9 @@
   }
   .hidden {
     display: none;
+  }
+  .table {
+    display: table;
   }
   .h-12 {
     height: calc(var(--spacing) * 12);
@@ -396,8 +402,14 @@
   .w-full {
     width: 100%;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -437,6 +449,13 @@
   }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
+  }
+  .space-x-1 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 1) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-x-reverse)));
+    }
   }
   .space-x-1\.5 {
     :where(& > :not(:last-child)) {
@@ -546,8 +565,29 @@
   .bg-\[url\(\.\.\/img\/a1\.jpg\)\] {
     background-image: url(../img/a1.jpg);
   }
+  .bg-\[url\(\.\.\/img\/bg-\)\] {
+    background-image: url(../img/bg-);
+  }
   .bg-\[url\(\.\.\/img\/bg-2\.jpg\)\] {
     background-image: url(../img/bg-2.jpg);
+  }
+  .bg-\[url\(\.\.\/img\/bg-g\.jpg\)\] {
+    background-image: url(../img/bg-g.jpg);
+  }
+  .bg-\[url\(\.\.\/img\/bg-lin\.jpg\)\] {
+    background-image: url(../img/bg-lin.jpg);
+  }
+  .bg-\[url\(\.\.\/img\/bg-new-login\.jpg\)\] {
+    background-image: url(../img/bg-new-login.jpg);
+  }
+  .bg-\[url\(\.\.\/img\/bg-pink\.jpg\)\] {
+    background-image: url(../img/bg-pink.jpg);
+  }
+  .bg-\[url\(\.\.\/img\/bg-t\.jpg\)\] {
+    background-image: url(../img/bg-t.jpg);
+  }
+  .bg-\[url\(\.\.\/img\/bg\.jpg\)\] {
+    background-image: url(../img/bg.jpg);
   }
   .bg-\[url\(\.\.\/img\/bg1\.jpg\)\] {
     background-image: url(../img/bg1.jpg);
@@ -560,6 +600,9 @@
   }
   .bg-\[url\(\.\.\/img\/bgbook\.jpg\)\] {
     background-image: url(../img/bgbook.jpg);
+  }
+  .bg-\[url\(\.\.\/img\/download\.jpg\)\] {
+    background-image: url(../img/download.jpg);
   }
   .bg-\[url\(\.\.\/img\/imgs1\.jpg\)\] {
     background-image: url(../img/imgs1.jpg);
@@ -662,6 +705,9 @@
   .text-white {
     color: var(--color-white);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -727,6 +773,10 @@
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, var(--color-pink-500) var(--tw-shadow-alpha), transparent);
     }
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .outline-0 {
     outline-style: var(--tw-outline-style);
