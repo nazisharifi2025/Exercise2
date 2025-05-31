@@ -9,10 +9,21 @@
   <body
     class="h-screen w-full bg-[url(../img/bg-gridian.jpg)] bg-cover text-2xl flex justify-center items-center"
   >
-    <p class="text-center">
+    <p class="text-center text-black">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, voluptas
       ullam! Quasi sapiente dignissimos rem ratione cumque nostrum ullam culpa
       veniam pariatur libero eveniet in repellat saepe, nemo at dolorum?
     </p>
+    <script>
+      const p = document.querySelector("p");
+      setInterval(() => {
+        p.classList.add("text-white");
+        p.classList.remove("text-black");
+      }, 2000);
+      setInterval(() => {
+        p.classList.remove("text-white");
+        p.classList.add("text-black");
+      }, 5000);
+    </script>
   </body>
 </html>

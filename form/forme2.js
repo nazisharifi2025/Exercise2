@@ -7,7 +7,7 @@ const Email = document.getElementById("Email");
 const btnSave = document.getElementById("btnSave");
 const divParint = document.getElementById("divParint");
 const divshoing = document.getElementById("shoingdiv");
-
+const propirty = {};
 btnSave.addEventListener("click", () => {
   if (
     name2.value !== "" &&
@@ -25,14 +25,13 @@ btnSave.addEventListener("click", () => {
     Email.classList.remove("border");
     Email.classList.remove("border-red-500");
 
+    // person.name =name2.val
     if (
       isNaN(name2.value) &&
       name2.value.length >= 2 &&
       name2.value.length <= 10
     ) {
-      const h1 = document.createElement("h1");
-      h1.textContent = name2.value;
-      divshoing.appendChild(h1);
+      propirty.value = name2.value;
       name2.classList.remove("border");
       name2.classList.remove("border-red-500");
       name2.value = "";
@@ -40,10 +39,12 @@ btnSave.addEventListener("click", () => {
       name2.classList.add("border");
       name2.classList.add("border-red-500");
     }
-    if (lastName.value.length >= 2 && lastName.value.length <= 10) {
-      const h2 = document.createElement("h1");
-      h2.textContent = lastName.value;
-      divshoing.appendChild(h2);
+    if (
+      isNaN(lastName.value) &&
+      lastName.value.length >= 2 &&
+      lastName.value.length <= 10
+    ) {
+      propirty.lastName = lastName.value;
       lastName.classList.remove("border");
       lastName.classList.remove("border-red-500");
       lastName.value = "";
@@ -52,9 +53,7 @@ btnSave.addEventListener("click", () => {
       lastName.classList.add("border-red-500");
     }
     if (number.value.length === 10) {
-      const h3 = document.createElement("h1");
-      h3.textContent = number.value;
-      divshoing.appendChild(h3);
+      propirty.number = number.value;
       number.classList.remove("border");
       number.classList.remove("border-red-500");
       number.value = "";
@@ -68,14 +67,11 @@ btnSave.addEventListener("click", () => {
       Email.value.endsWith("@incloud.com") ||
       Email.value.endsWith("@yahoo.com")
     ) {
-      const h4 = document.createElement("h1");
-      h4.textContent = Email.value;
-      divshoing.appendChild(h4);
+      propirty.Email = Email.value;
       Email.classList.remove("border");
       Email.classList.remove("border-red-500");
       Email.value = "";
     } else {
-      Emailerror.classList.remove("hidden");
       Email.classList.add("border");
       Email.classList.add("border-red-500");
     }
