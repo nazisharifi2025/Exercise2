@@ -299,6 +299,9 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .hidden {
     display: none;
   }
@@ -329,6 +332,9 @@
   .h-\[70\%\] {
     height: 70%;
   }
+  .h-\[80\%\] {
+    height: 80%;
+  }
   .h-\[90\%\] {
     height: 90%;
   }
@@ -343,6 +349,9 @@
   }
   .h-\[200px\] {
     height: 200px;
+  }
+  .h-\[250px\] {
+    height: 250px;
   }
   .h-\[360px\] {
     height: 360px;
@@ -410,6 +419,9 @@
   .w-\[250px\] {
     width: 250px;
   }
+  .w-\[280px\] {
+    width: 280px;
+  }
   .w-full {
     width: 100%;
   }
@@ -421,6 +433,12 @@
   }
   .resize {
     resize: both;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
