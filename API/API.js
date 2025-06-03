@@ -10,6 +10,10 @@ const url = `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${
 fetch(url).then((respons) => {
   let deta = respons.json();
   deta.then((deta) => {
-    deta.weather;
+    if (deta.weather[0].main === "clear") {
+      const div = document.createElement("div");
+      div.classList.add("");
+    }
+    deta.weather[0].main;
   });
 });
