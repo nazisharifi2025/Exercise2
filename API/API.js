@@ -7,3 +7,9 @@ if (cityName.value !== "") {
   city = cityName.value;
 }
 const url = `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}`;
+fetch(url).then((respons) => {
+  let deta = respons.json();
+  deta.then((deta) => {
+    deta.weather;
+  });
+});
