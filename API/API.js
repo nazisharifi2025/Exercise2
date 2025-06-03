@@ -3,6 +3,7 @@ const apiKey = "684418efa9274f3ad6491868b0271123";
 let city = "Kabul";
 const cityName = document.getElementById("cityName");
 const btn = document.getElementById("btn");
+const divParint = document.getElementById("divParint");
 if (cityName.value !== "") {
   city = cityName.value;
 }
@@ -12,7 +13,11 @@ fetch(url).then((respons) => {
   deta.then((deta) => {
     if (deta.weather[0].main === "clear") {
       const div = document.createElement("div");
-      div.classList.add("");
+      div.classList.add("divapi");
+      div.innerHTML = `
+      <img src="../img/cloud-moon.svg" class="h-[80%]" alt="" />
+      <h1>${deta.name}</h1>
+      `;
     }
     deta.weather[0].main;
   });
