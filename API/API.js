@@ -7,7 +7,7 @@ const divParint = document.getElementById("divParint");
 if (cityName.value !== "") {
   city = cityName.value;
 }
-const url = `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}`;
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 fetch(url).then((respons) => {
   let deta = respons.json();
   deta.then((deta) => {
@@ -18,6 +18,7 @@ fetch(url).then((respons) => {
       <img src="../img/cloud-moon.svg" class="h-[80%]" alt="" />
       <h1>${deta.name}</h1>
       `;
+      divParint.append(div);
     }
     deta.weather[0].main;
   });
