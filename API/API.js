@@ -9,8 +9,8 @@ if (cityName.value !== "") {
 }
 const divParint = document.getElementById("divParint");
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-fetch(url).then((respons) => {
-  let data = respons.json();
+fetch(url).then((response) => {
+  let data = response.json();
   data.then((data) => {
     if (data.weather[0].main === "clear") {
       const div = document.createElement("div");
