@@ -3,15 +3,16 @@ const apiKey = "684418efa9274f3ad6491868b0271123";
 let city = "Kabul";
 const cityName = document.getElementById("cityName");
 const btn = document.getElementById("btn");
-const divParint = document.getElementById("divParint");
+
 if (cityName.value !== "") {
   city = cityName.value;
 }
+const divParint = document.getElementById("divParint");
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 fetch(url).then((respons) => {
-  let deta = respons.json();
-  deta.then((deta) => {
-    if (deta.weather[0].main === "clear") {
+  let data = respons.json();
+  data.then((data) => {
+    if (data.weather[0].main === "clear") {
       const div = document.createElement("div");
       div.classList.add("divapi");
       div.innerHTML = `
@@ -20,6 +21,5 @@ fetch(url).then((respons) => {
       `;
       divParint.append(div);
     }
-    deta.weather[0].main;
   });
 });
