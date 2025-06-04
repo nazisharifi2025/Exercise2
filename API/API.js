@@ -2,7 +2,7 @@
 const apiKey = "684418efa9274f3ad6491868b0271123";
 let city = "Kabul";
 const cityName = document.getElementById("cityName");
-const btn = document.getElementById("btn");
+// const btn = document.getElementById("btn");
 
 if (cityName.value !== "") {
   city = cityName.value;
@@ -12,12 +12,20 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${a
 fetch(url).then((response) => {
   let data = response.json();
   data.then((data) => {
-    if (data.weather[0].main === "clear") {
+    if (data.weather[0].main === "Clear") {
       const div = document.createElement("div");
       div.classList.add("divapi");
       div.innerHTML = `
-      <img src="../img/cloud-moon.svg" class="h-[80%]" alt="" />
-      <h1>${deta.name}</h1>
+      <img src="../img/cloud-moon.svg" class="h-[90%]" alt="" />
+      <h1>${data.name}</h1>
+      `;
+      divParint.append(div);
+    } else if (data.weather[0].main === "Rain") {
+      const div = document.createElement("div");
+      div.classList.add("divapi");
+      div.innerHTML = `
+      <img src="../img/partly-cloudy.svg" class="h-[90%]" alt="" />
+      <h1>${data.name}</h1>
       `;
       divParint.append(div);
     }

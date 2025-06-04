@@ -16,6 +16,6 @@
     @apply flex flex-wrap justify-center items-center gap-4 mx-auto;
   }
   .divApi {
-    @apply flex flex-col w-[45%] h-1/2 justify-center items-center text-3xl rounded-md shadow-md shadow-gray-200;
+    @apply flex flex-col h-full w-full justify-center items-center text-3xl;
   }
 }
