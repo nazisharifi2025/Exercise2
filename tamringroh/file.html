@@ -9,89 +9,23 @@
   </head>
   <body>
     <script>
-      // <!-- loop -->
-      // لوپ ها برای اجرای  تکراری یک قطعه  کد استفاده میشود
-      // <!-- for loop -->
-      // فور آدی
-      // for (let i = 0; i > 5; i++) {
-      //   console.log(i);
-      // }
-      for (let a = 0; a < 6; a++) {
-        console.log(a);
-      }
-      console.log("---------------");
-      // <!-- while loop -->
-      // let b = 0;
-      // while (b < 5) {
-      //   console.log(b);
-      //   b++;
-      // }
-
-      let b = 0;
-      while (b < 5) {
-        console.log(b);
-        b++;
-      }
-
-      console.log("---------------");
-      //  <!-- do while loop -->
-      // let i = 0;
-      // do {
-      //   console.log(i);
-      //   i++;
-      // } while (i < 5);
-      // let d = 10;
-      // do {
-      //   console.log(d);
-      //   d--;
-      // } while (d > 0);
-      // let n = 0 ;
-      // do{
-      //   console.log("hi");
-      //   1++;
-      // }while(n)
-      console.log("---------------");
-      // <!-- for of  -->
-      // let books = ["book1", "book2"];
-      // for (let book of books) {
-      //   console.log(book);
-      // }
-      const book = ["book1", "book2", "book3", "book4"];
-      for (let books of book) {
-        console.log(books);
-      }
-      console.log("---------------");
-      // <!-- for in -->
-      // let person = {
-      //   name: "ali",
-      //   age: 20,
-      // };
-      // for (let key in person) {
-      //   console.log(key, person[key]);
-      // }
-      let person = {
-        name: "ali",
-        age: 20,
-        lastName: "sharif",
-      };
-      for (let key in person) {
-        console.log(key, person[key]);
-      }
-      console.log("---------------");
       //  <!-- forEach -->
       let yuser = [
         { name: "ali", age: 20 },
         { name: "bahar", age: 10 },
         { name: "nazi", age: 18 },
         { name: "shirin", age: 21 },
-        { name: "shahrzad", age: 21 },
-        { name: "salima", age: 21 },
-        { name: "bahara", age: 21 },
-        { name: "sahil", age: 21 },
-        { name: "sohail", age: 21 },
+        { name: "shahrzad", age: 22 },
+        { name: "salima", age: 23 },
+        { name: "bahara", age: 24 },
+        { name: "sahil", age: 23 },
+        { name: "sohail", age: 26 },
       ];
+      // yuser.forEach((user) => {
+      //   console.log(`${user.name} is ${user.age} years old`);
+      // });
       yuser.forEach((user) => {
-        console.log(`${user.name} is ${user.age} years old`);
+        console.log(`${user.name} is  ${user.age} years old`);
       });
     </script>
     <!-- loop -->
